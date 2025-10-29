@@ -1,8 +1,20 @@
 {
   "name": "cryptoducks-vite",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
+  "description": "A React app built with Vite. Used by the TripleTen Software Engineering Bootcamp\r to demonstrate the frontend authorization and authentication.",
+  "homepage": "https://github.com/MarcPickel/frontend-authorization-demo#readme",
+  "bugs": {
+    "url": "https://github.com/MarcPickel/frontend-authorization-demo/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarcPickel/frontend-authorization-demo.git"
+  },
+  "license": "ISC",
+  "author": "",
   "type": "module",
+  "main": "vite.config.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
