@@ -1,5 +1,5 @@
 // Specify the BASE_URL for the API.
-export const BASE_URL = "https://api.nomaoreparties.co";
+export const BASE_URL = "https://api.nomoreparties.co";
 
 // The register function accepts the necessary data as arguments,
 // and sends a POST request to the given endpoint.
@@ -11,6 +11,19 @@ export const register = (username, password, email) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ username, password, email }),
+  }).then((res) => {
+    return res.ok ? res.json() : Promise.reject(`Error: ${res.status}`);
+  });
+};
+
+export const authorize = (identifier, password) => {
+  return fetch(`${BASE_URL}/auth/local`, {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ identifier, password }),
   }).then((res) => {
     return res.ok ? res.json() : Promise.reject(`Error: ${res.status}`);
   });

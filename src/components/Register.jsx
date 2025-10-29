@@ -73,7 +73,7 @@ const Register = ({ handleRegistration }) => {
       </form>
       <div className="register__signin">
         <p>Already a member?</p>
-        <Link to="login" className="register__login-link">
+        <Link to="/login" className="register__login-link">
           Log in here
         </Link>
       </div>
