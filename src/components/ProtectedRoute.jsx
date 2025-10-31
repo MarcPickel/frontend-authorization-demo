@@ -1,10 +1,9 @@
+import { useContext } from "react";
 import { Navigate, useLocation } from "react-router-dom";
 
-export default function ProtectedRoute({
-  isLoggedIn,
-  children,
-  anonymous = false,
-}) {
+export default function ProtectedRoute({ children, anonymous = false }) {
+  const { isLoggedIn } = useContext(AppContext);
+
   const location = useLocation();
   const from = location.state?.from || "/";
 
